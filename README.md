@@ -1,6 +1,6 @@
-# GraphQL With Etherscan APIs Bounty
+# GraphQL With Etherscan APIs 
 
-## Overview of Bounty
+## Overview 
 This project builds upon the GraphQL with REST API module, leveraging the knowledge to encapsulate multiple REST API endpoints into a unified GraphQL API for streamlined and efficient querying.
 
 For this bounty, the task involves working with Etherscan APIs to consolidate various Etherscan API endpoints into a singular GraphQL API. The specified Etherscan APIs include:
