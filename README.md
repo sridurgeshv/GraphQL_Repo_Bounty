@@ -1,76 +1,26 @@
-# GraphQL With Etherscan APIs
+<!DOCTYPE html>
+<html lang="en">
+<body>
 
-## Getting Started
+<h1>GraphQL With Etherscan APIs Bounty</h1>
 
-To get started using the GraphQL Etherscan API, follow these steps:
+<h2>Overview of Bounty</h2>
+<p>This project builds upon the GraphQL with REST API module, leveraging the knowledge to encapsulate multiple REST API endpoints into a unified GraphQL API for streamlined and efficient querying.</p>
+<p>For this bounty, the task involves working with Etherscan APIs to consolidate various Etherscan API endpoints into a singular GraphQL API. The specified Etherscan APIs include:</p>
+<ul>
+  <li>Get Ether Balance for a Single Address</li>
+  <li>Get Total Supply of Ether</li>
+</ul>
 
-1. Clone this repository
-2. Run `npm install` to install dependencies
-3. Create an Etherscan API key (explained below)
-4. Start the Apollo server (explained below)
-5. Make GraphQL queries against the server (example below)
+<h2>Getting Started</h2>
+<ol>
+  <li>Sign up for a new <a href="https://etherscan.io/login" target="_blank">Etherscan account</a> if you haven't already, to acquire your unique API key.</li>
+  <li>Clone this Git repository to your local machine.</li>
+  <li>Create a new .env file within the cloned repository and define a ETHERSCAN_API variable to store your Etherscan API key.</li>
+  <li>Execute the <code>$npm install</code> command in your terminal to install the necessary dependencies.</li>
+  <li>Implement code changes within <code>schema.graphql</code> and <code>ethDatasource.js</code> to align with the specified task.</li>
+  <li>Run the <code>$node index.js</code> command in your terminal to initialize the GraphQL server and perform your desired queries.</li>
+</ol>
 
-## Benefits of using GraphQL API
-
-Wrapping the Etherscan REST APIs in a GraphQL API provides the following benefits:
-
-- Query multiple related resources in a single API call
-- Strong typing system
-- Intuitive query language
-- Built-in documentation
-
-## Create an Etherscan API Key
-
-To use the Etherscan APIs, you'll need an API key. Follow these steps:
-
-1. Sign up for an Etherscan account at https://etherscan.io/register
-2. Go to https://etherscan.io/myapikey to generate an API key
-3. Add the API key to a `.env` file as `ETHERSCAN_API=your_api_key`
-
-## Overview of GraphQL Etherscan API endpoints
-
-The GraphQL API wraps the following Etherscan REST endpoints:
-
-- `etherBalanceByAddress` - Get ETH balance for an address
-- `totalSupplyOfEther` - Get total ETH supply
-- `latestEthereumPrice` - Get latest ETH price
-- `blockConfirmationTime` - Get estimated block confirmation time
-
-See the `schema.graphql` file for details.
-
-## How to run Apollo Server
-
-Starting the Apollo GraphQL Server:
-
-1. Open your terminal on VSCode
-2. Run the following command to start the server: `node index.js`
-3. Upon successful startup, you should see this message: 🚀 Server ready at http://localhost:9000/
-4. Access the Apollo Server by navigating to http://localhost:9000 on your browser
-
-## Sample GraphQL Query
-
-Below is a sample GraphQL query to fetch the necessary data from Etherscan
-```graphql
-query {
-  etherBalanceByAddress {
-    message
-    result
-  }
-  totalSupplyOfEther {
-    message
-    result
-  }
-  latestEthereumPrice {
-    message
-    result {
-      ethbtc
-      ethusd
-      ethusd_timestamp
-    }
-  }
-  blockConfirmationTime {
-    message
-    result
-  }
-}
-```
+</body>
+</html>
